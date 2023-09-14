@@ -3,13 +3,13 @@ import React, {useEffect, useRef } from 'react';
 // Опишіть Props
 type Props = {
   children: React.ReactNode;
-  onContentEndVisible(): void
+  onContentEndVisible: () => void;
 }
 
 type Options = {
   rootMargin: string;
   threshold: number;
-  root: null
+  root: HTMLElement | null
 }
 
 export function Observer({ children, onContentEndVisible }: Props) {
